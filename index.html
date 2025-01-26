@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padawan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Squada+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Pantalla de bienvenida -->
+    <div id="welcomeScreen">
+        <h1>¡BIENVENIDO, JOVEN INICIADO!</h1>
+
+        <div class="mainDiv">
+            <p>Ha llegado a nuestros oídos que deseas comenzar tu viaje a través de la senda de la Fuerza. Por ello, la
+                <strong>Orden
+                    Jedi</strong>, con su sabiduría ancestral, te ha convocado para que demuestres tu conocimiento y tu
+                compromiso
+                con la misma.
+            <p>Sin embargo, antes de ser aceptado oficialmente como <strong>Padawan</strong>, deberás superar un
+                sencillo examen que
+                pondrá a prueba tu sabiduría, tu dedicación y tu comprensión de los principios Jedi.</p>
+            <p>Siéntete libre de consultar los antiguos textos sagrados y el Código Jedi en busca de respuestas, más
+                ten
+                presente que el uso de inteligencias del <strong>Lado Oscuro</strong> queda completamente prohibido.</p>
+            <p>Recuerda que cada pregunta te acerca un paso más hacia tu meta, pero también te desafía a ser fiel a
+                los
+                valores fundamentales de la Orden. La Fuerza te guiará, pero tu disciplina y
+                concentración serán
+                esenciales
+                para completar esta primera prueba.</p>
+            <p>Mucha suerte, Guillermo Tabernero.</p>
+            <p><img src="img/b4.png" alt="Icono"></p>
+            <button id="startButton" class="mainButton" onclick="startQuiz()">COMENZAR LA PRUEBA</button>
+        </div>
+    </div>
+
+    <form id="quizForm" class="hidden">
+        <h1 id="title">Prueba de conocimiento</h1>
+
+        <div id="question1" class="questionDiv">
+            <p>¿Cómo se llama el campo de energía que da a los Jedi su poder?</p>
+            <input type="text" id="answer1" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(1)">✔</button>
+        </div>
+        <div id="message1" class="hidden answerDiv"></div>
+
+        <div id="question2" class="hidden questionDiv">
+            <p>¿Cómo se llaman (en castellano) los organismos microscópicos que viven dentro de las células y que
+                permiten a los
+                individuos estar en conexión con la Fuerza?</p>
+            <input type="text" id="answer2" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(2)">✔</button>
+        </div>
+        <div id="message2" class="hidden answerDiv"></div>
+
+
+        <div id="question3" class="hidden questionDiv">
+            <p>¿Cómo se llaman los cristales utilizados para alimentar los sables de luz de los Jedi?</p>
+            <input type="text" id="answer3" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(3)">✔</button>
+        </div>
+        <div id="message3" class="hidden answerDiv"></div>
+
+
+        <div id="question4" class="hidden questionDiv">
+            <p>¿Cuál es el nombre del planeta que sirve como sede de la Orden Jedi?</p>
+            <input type="text" id="answer4" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(4)">✔</button>
+        </div>
+        <div id="message4" class="hidden answerDiv"></div>
+
+
+        <div id="question5" class="hidden questionDiv">
+            <p>¿En qué planeta se ubicó el primer Templo Jedi?</p>
+            <input type="text" id="answer5" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(5)">✔</button>
+        </div>
+        <div id="message5" class="hidden answerDiv"></div>
+
+        <div id="question6" class="hidden questionDiv">
+            <p>¿Qué otro color de sable de luz tiene un Jedi típico además de azul?</p>
+            <input type="text" id="answer6" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(6)">✔</button>
+        </div>
+        <div id="message6" class="hidden answerDiv"></div>
+
+
+        <div id="question7" class="hidden questionDiv">
+            <p>¿De qué color es el sable de luz único del maestro Jedi Mace Windu?</p>
+            <input type="text" id="answer7" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(7)">✔</button>
+        </div>
+        <div id="message7" class="hidden answerDiv"></div>
+
+
+        <div id="question8" class="hidden questionDiv">
+            <p>¿Quién fue el maestro de Anakin Skywalker?</p>
+            <input type="text" id="answer8" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(8)">✔</button>
+        </div>
+        <div id="message8" class="hidden answerDiv"></div>
+
+
+        <div id="question9" class="hidden questionDiv">
+            <p>¿Qué título recibió Anakin Skywalker cuando se conviertió en Sith?</p>
+            <input type="text" id="answer9" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(9)">✔</button>
+        </div>
+        <div id="message9" class="hidden answerDiv"></div>
+
+
+        <div id="question10" class="hidden questionDiv">
+            <p>¿Qué habilidad es característica de los Jedi para manipular objetos a distancia?</p>
+            <input type="text" id="answer10" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(10)">✔</button>
+        </div>
+        <div id="message10" class="hidden answerDiv"></div>
+
+
+        <div id="question11" class="hidden questionDiv">
+            <p>¿Cómo se les llama a aquellos caballeros en posesión de la Fuerza que siguen el Lado Oscuro?</p>
+            <input type="text" id="answer11" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(11)">✔</button>
+        </div>
+        <div id="message11" class="hidden answerDiv"></div> 
+
+
+        <div id="question12" class="hidden questionDiv">
+            <p>¿Cuál es el color de los sables de luz que utilizan los Sith?</p>
+            <input type="text" id="answer12" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(12)">✔</button>
+        </div>
+        <div id="message12" class="hidden answerDiv"></div>
+
+
+        <div id="question13" class="hidden questionDiv">
+            <p>¿Cómo se llamó al mayor conflicto bélico en la galaxia que enfrentó a la República Galáctica luchó contra
+                la Confederación de Sistemas Independientes?</p>
+            <input type="text" id="answer13" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(13)">✔</button>
+        </div>
+        <div id="message13" class="hidden answerDiv"></div> 
+
+
+        <div id="question14" class="hidden questionDiv">
+            <p>Y, por último, ¿cuál es el nombre de la orden emitida por el Canciller Supremo Palpatine durante las
+                Guerras Clon, que
+                ordenaba la aniquilación de los Jedi?</p>
+            <input type="text" id="answer14" required>
+            <button type="button" class="answerButton" onclick="checkAnswer(14)">✔</button>
+        </div>
+        <div id="message14" class="hidden answerDiv"></div> 
+    </form>
+
+    <div class="message hidden" id="successMessage">
+        <h1>🎉 ¡ENHORABUENA! 🎉</h1>
+
+        <div class="mainDiv">
+            <p>Me complace comunicarte que has superado la primera prueba. Has completado el examen con sabiduría y has
+                demostrado tu firme compromiso con los principios de la Orden Jedi.</p>
+            <p>Sin embargo, tu viaje aún no ha terminado, joven aprendiz. Aunque has dado el primer paso hacia la senda
+                que podría llevarte a convertirte en un Padawan, ahora, más que nunca, deberás seguir demostrando tu
+                valor y tu conocimiento de la Fuerza.</p>
+            <p>¿Estás preparado para la siguiente prueba?</p>
+
+            <button class="mainButton" onclick="showCode()">¡SÍ!</button>
+
+            <div id="finalText" class="hidden">
+                <p class="codeText" class="hidden">¡Excelente! Para comenzar con la siguiente prueba necesitarás el
+                    código Jedi secreto mencionado en los <a id="web"
+                        href="https://www.instant-gaming.com/es/tutorial-ea-app" target="_blank">antiguos textos
+                        Jedi</a>:</p>
+                <p id="code" class="codeText" class="hidden"><img src="img/code.jpg" alt="Código"></p>
+                <p class="codeText" class="hidden">Que la Fuerza te acompañe en este desafío y en todos los que están
+                    por venir.</p>
+                <p><img src="img/b4.png" alt="Icono"></p>
+            </div>
+        </div>
+    </div>
+    <div class="message hidden incorrectDiv" id="retryMessage">Respuesta incorrecta.</div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
